@@ -11,12 +11,6 @@ import requests
 from bs4 import BeautifulSoup
 import streamlit as st
 
-from plotly.offline import plot
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
-
-import plotly.io as pio
-
 
 url = 'https://www.macrotrends.net/stocks/charts/TSLA/tesla/revenue'
 html_data = requests.get(url).text
