@@ -1,0 +1,4 @@
+pandas==1.2.5
+streamlit==0.86.0
+bs4 == 4.9.0
+yfinance == 0.1.74
