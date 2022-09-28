@@ -5,7 +5,7 @@ Created on Wed Sep 28 12:22:07 2022
 @author: lpnnr
 """
 
-import yfinance as yf
+#import yfinance as yf
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
@@ -17,7 +17,7 @@ from plotly.subplots import make_subplots
 
 import plotly.io as pio
 
-df_stock = yf.Ticker('TSLA').history(period = 'max', interval = '1d')
+#df_stock = yf.Ticker('TSLA').history(period = 'max', interval = '1d')
 
 
 st.title("Streamlit Team 10")
@@ -51,16 +51,11 @@ st.write("Lorem Ipsum")
 
 options = st.multiselect("Kies dataset", ["Test1", "test2", "test3"])
 
-if options == "Test1":
-    st.write(df_stock)
+
 
     
 
     
-chart_data = df_stock
-
-st.line_chart(chart_data)
-
 
 
 
