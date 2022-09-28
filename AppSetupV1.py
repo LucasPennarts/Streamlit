@@ -355,7 +355,7 @@ if st.button("reset"):
 
 st.write(df_stock_index)
 
-st.linegraph(df_stock)
+st.line_chart(data=df_stock, x="Date", y="Close", width=0, height=0)
 
 
 
