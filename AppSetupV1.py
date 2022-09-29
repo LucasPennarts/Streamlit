@@ -10,6 +10,7 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 import streamlit as st
+import altair as alt
 
 
 
@@ -355,8 +356,20 @@ if st.button("reset"):
 
 st.write(df_stock_index)
 
-st.line_chart(data=df_stock, x="Date", y="Close", width=0, height=0)
-
-
+ 
+line = alt.Chart(df_stock).mark_line().encode(
+    alt.X("date", title="Date"),
+    alt.Y("Close", title="Closing Price", scale=alt.Scale(zero=False)),
+    color='SymbolFullName'
+).properties(
+    height=400, width=650,
+    title= "Stock Title"
+).configure_title(
+    fontSize=16
+).configure_axis(
+    titleFontSize=14,
+    labelFontSize=12
+)
+line
 
 
